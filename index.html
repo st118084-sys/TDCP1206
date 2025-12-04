@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你的姓名 | 2026 應屆畢業生</title>
+    <title>吳同學 | 亞洲大學財務金融 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -12,7 +12,6 @@
             --gold: #ffd700;
             --lightgold: #f4d35e;
             --text: #eee;
-            --gray: #bbb;
         }
         
         * { margin:0; padding:0; box-sizing:border-box; }
@@ -33,15 +32,14 @@
             margin: 40px auto;
             display: grid;
             grid-template-columns: 1.1fr 1fr;
-            gap: 25px;
+            gap: 30px;
         }
         
-        /* 左邊主卡片 */
         .main-card {
             background: linear-gradient(135deg, var(--card), #16213e);
             border-radius: 20px;
-            padding: 45px 40px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            padding: 50px 45px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.7);
             border: 1px solid rgba(255,215,0,0.2);
             position: relative;
             overflow: hidden;
@@ -50,12 +48,12 @@
         .main-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; height: 4px;
+            top: 0; left: 0; right: 0; height: 5px;
             background: linear-gradient(90deg, var(--gold), var(--lightgold));
         }
         
         h1 {
-            font-size: 3.2em;
+            font-size: 3.4em;
             font-weight: 700;
             background: linear-gradient(90deg, var(--gold), var(--lightgold));
             background-clip: text;
@@ -65,122 +63,100 @@
         }
         
         .title {
-            font-size: 1.4em;
+            font-size: 1.5em;
             color: var(--gold);
-            margin-bottom: 25px;
-            letter-spacing: 2px;
-        }
-        
-        .section {
-            margin-top: 40px;
+            letter-spacing: 3px;
+            margin-bottom: 35px;
         }
         
         h2 {
             color: var(--gold);
-            font-size: 1.5em;
-            margin-bottom: 18px;
+            font-size: 1.6em;
+            margin: 40px 0 20px;
             position: relative;
             display: inline-block;
         }
-        
         h2::after {
             content: '';
             position: absolute;
-            bottom: -8px; left: 0;
-            width: 60px;
-            height: 3px;
+            bottom: -10px; left: 0;
+            width: 70px; height: 4px;
             background: var(--gold);
+            border-radius: 2px;
         }
         
         .exp-item {
-            margin-bottom: 28px;
-            padding-bottom: 20px;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
             border-bottom: 1px solid rgba(255,215,0,0.15);
         }
+        .exp-item:last-child { border:none; }
         
-        .exp-item:last-child { border-bottom: none; }
+        .exp-title { font-size: 1.3em; color: white; display: block; margin-bottom: 6px; }
+        .company { color: var(--gold); font-weight: 600; }
+        .date { float: right; color: #aaa; font-size: 0.95em; }
         
-        .exp-title {
-            font-size: 1.25em;
-            color: white;
-            margin-bottom: 5px;
-        }
-        
-        .company {
-            color: var(--gold);
-            font-weight: 500;
-        }
-        
-        .date {
-            font-size: 0.9em;
-            color: #aaa;
-            float: right;
-        }
-        
-        /* 右邊側欄卡片們 */
+        /* 右側卡片群 */
         .sidebar {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 30px;
         }
         
         .card {
-            background: rgba(26,26,46,0.8);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
-            padding: 30px;
+            background: rgba(26,26,46,0.85);
+            backdrop-filter: blur(12px);
+            border-radius: 18px;
+            padding: 35px;
             border: 1px solid rgba(255,215,0,0.2);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-            transition: transform 0.3s;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            transition: transform 0.4s;
+        }
+        .card:hover { transform: translateY(-12px); }
+        
+        .photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(255,215,0,0.3);
+            margin-bottom: 25px;
         }
         
-        .card:hover {
-            transform: translateY(-10px);
-        }
+        .contact li { margin-bottom: 16px; font-size: 1.1em; }
+        .contact a { color: var(--gold); text-decoration: none; }
         
-        .contact li {
-            margin-bottom: 14px;
-            font-size: 1.05em;
-        }
-        
-        .contact a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-        
-        /* 互動式技能圈 */
+        /* 圓形技能圈 */
         .skills-circle {
             display: flex;
             flex-wrap: wrap;
-            gap: 18px;
+            gap: 20px;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 25px;
         }
-        
         .skill {
-            width: 90px;
-            height: 90px;
+            width: 100px; height: 100px;
             border-radius: 50%;
-            background: conic-gradient(var(--gold) calc(var(--percent) * 1%), #333 calc(var(--percent) * 1%));
+            background: conic-gradient(var(--gold) calc(var(--p)*1%), #333 calc(var(--p)*1%));
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
             position: relative;
         }
-        
         .skill::after {
             content: attr(data-label);
             position: absolute;
-            width: 70px;
-            height: 70px;
+            width: 80px; height: 80px;
             background: var(--card);
             border-radius: 50%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
             font-size: 0.9em;
+            line-height: 1.3;
         }
         
         .print-btn {
@@ -191,90 +167,85 @@
             color: #000;
             font-weight: bold;
             border: none;
-            padding: 16px 32px;
+            padding: 16px 35px;
             border-radius: 50px;
             font-size: 1.1em;
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(255,215,0,0.4);
-            z-index: 100;
+            box-shadow: 0 10px 30px rgba(255,215,0,0.5);
+            z-index: 999;
         }
         
+        @media (max-width: 968px) {
+            .container { grid-template-columns: 1fr; }
+            .photo { width: 180px; height: 180px; }
+        }
         @media print {
-            body { background: white; color: black; }
-            .card, .main-card { border: none; box-shadow: none; background: white; }
-            .print-btn { display: none; }
-            h1 { -webkit-text-fill-color: black; background: none; }
+            body { background:white; color:black; }
+            .card, .main-card { background:white; border:none; box-shadow:none; }
+            h1 { -webkit-text-fill-color:black; }
+            .print-btn { display:none; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- 左區塊 -->
+    <!-- 左側主內容 -->
     <div class="main-card">
         <h1>楊富勝</h1>
-        <div class="title">亞洲大學 財務金融學系 | 2026 應屆</div>
+        <div class="title">亞洲大學 財務金融學系 │ 2026 應屆</div>
         
-        <div class="section">
-            <h2>求職意向</h2>
-            <p style="font-size:1.1em; line-height:1.8;">
-                目標進入投資銀行分析師（IBD）、私募股權（PE）、對沖基金或頂尖 FinTech。具備扎實財務建模、估值能力與國際視野，渴望在高強度環境中快速成長。
-            </p>
+        <h2>求職意向</h2>
+        <p style="font-size:1.15em;line-height:1.8;">
+            目標進入投資銀行 IBD、私募股權 PE、對沖基金或頂尖 FinTech。<br>
+            具備財務建模、DCF、LBO、Python 量化能力，渴望在高強度環境中快速成長。
+        </p>
+        
+        <h2>實務經驗</h2>
+        <div class="exp-item">
+            <span class="exp-title">投資銀行部 暑期實習生</span>
+            <div class="company">摩根士丹利 / 富邦證券 / 其他</div>
+            <div class="date">2025.06 – 2025.08</div>
+            <ul style="margin-top:12px;padding-left:22px;">
+                <li>參與 IPO / M&A 專案，負責財務模型與估值</li>
+                <li>獨立完成 Comps、Precedent Transaction 分析</li>
+            </ul>
         </div>
         
-        <div class="section">
-            <h2>實務經驗</h2>
-            <div class="exp-item">
-                <div class="exp-title">摩根士丹利 投資銀行部 暑期實習生</div>
-                <div class="company">Morgan Stanley Taiwan</div>
-                <div class="date">2025.06 – 2025.08</div>
-                <ul style="margin-top:10px; padding-left:22px;">
-                    <li>參與兩件併購案（總金額 > NT$80億），負責財務模型與估值</li>
-                    <li>獨立完成 Comparable Company & Precedent Transaction 分析</li>
-                </ul>
-            </div>
-            <div class="exp-item">
-                <div class="exp-title">KKR 亞洲私募股權 遠距實習</div>
-                <div class="company">Kohlberg Kravis Roberts (Remote)</div>
-                <div class="date">2025.01 – 2025.04</div>
-                <ul style="margin-top:10px; padding-left:22px;">
-                    <li>協助 LBO 模型建置，獲分析師正面評價</li>
-                </ul>
-            </div>
-        </div>
+        <!-- 再複製上面的 exp-item 新增經驗 -->
     </div>
     
-    <!-- 右區塊 -->
+    <!-- 右側卡片區 -->
     <div class="sidebar">
-        <div class="card contact">
-            <h2 style="text-align:center;">聯絡方式</h2>
-            <ul>
-                <li>✆ 0912-345-678</li>
-                <li>✉️ yourname@asia.edu.tw</li>
-                <li>🔗 linkedin.com/in/yourname</li>
-                <li>📍 台北 / 台中</li>
+        <div class="card" style="text-align:center;">
+            <img src="photo.jpg" alt="照片" class="photo">
+            <div class="contact">
+                <ul class="contact">
+                <li>0912-345-678</li>
+                <li>your.email@asia.edu.tw</li>
+                <li>linkedin.com/in/你的名字</li>
+                <li>台中市</li>
             </ul>
         </div>
         
         <div class="card">
-            <h2 style="text-align:center;">核心技能</h2>
+            <h2 style="text-align:center;margin-bottom:25px;">核心技能</h2>
             <div class="skills-circle">
-                <div class="skill" style="--percent:92" data-label="財務建模<br>92%"><span></span></div>
-                <div class="skill" style="--percent:88" data-label="DCF / LBO<br>88%"><span></span></div>
-                <div class="skill" style="--percent:90" data-label="Python<br>90%"><span></span></div>
-                <div class="skill" style="--percent:85" data-label="Excel/VBA<br>85%"><span></span></div>
-                <div class="skill" style="--percent:87" data-label="英文<br>TOEIC 935"><span></span></div>
+                <div class="skill" style="--p:92" data-label="財務建模<br>92%"></div>
+                <div class="skill" style="--p:88" data-label="DCF/LBO<br>88%"></div>
+                <div class="skill" style="--p:90" data-label="Python<br>90%"></div>
+                <div class="skill" style="--p:85" data-label="Excel/VBA<br>85%"></div>
+                <div class="skill" style="--p:87" data-label="英文<br>TOEIC 900+"></div>
             </div>
         </div>
         
         <div class="card">
             <h2 style="text-align:center;">證照與榮譽</h2>
-            <ul style="font-size:1.02em;">
-                <li>證券商高級業務員</li>
-                <li>期貨商業務員</li>
-                <li>CFA Level I Candidate (2025.11)</li>
-                <li>2025 全國大專投資銀行案例分析競賽 冠軍</li>
-                <li>亞洲大學校長獎學金（連續三年）</li>
+            <ul style="font-size:1.1em;line-height:1.8;">
+                <li>CFA Level I 考生</li>
+                <li>證券高業 / 期貨 / 信託</li>
+                <li>全國財富管理案例競賽 冠軍</li>
+                <li>校長獎學金連續三年</li>
             </ul>
         </div>
     </div>
